@@ -37,6 +37,7 @@ function reply_msg($txtback,$replyToken)//สร้างข้อความ�
 					$txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
 					$sql_text = "SELECT * FROM tbl_hope WHERE name LIKE '% ".$txtin."'";
 					$query = mysqli_query($conn,$sql_text);
+					$num_rows = mysqli_num_rows($query);
 					while($obj = mysqli_fetch_array($query))
 					{
 						$txtback = $obj["lastname"];
