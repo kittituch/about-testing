@@ -33,7 +33,7 @@ function reply_msg($text,$replyToken)//สร้างข้อความแ�
 					$txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
 					if($txtin == "hibot")
 					{
-						$txtback = "hi human"
+						$txtback = "hi human";
 						reply_msg($txtback,$replytoken);
 					}	
 				}
