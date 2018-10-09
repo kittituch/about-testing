@@ -1,8 +1,7 @@
 <?php
 function reply_msg($text,$replyToken)//สร้างข้อความและตอบกลับ
 {
-    $access_token = 'gjNIH+NmRE2UubUIwtdgdCYSn2fqeBlW9lk3jOseknNL33bVZF0L1QBPGccbPBOPSXKh2H4RJWsgEW0P0u143UNFB/PmaL7q/c3L/323iVaIIV8r06Vsfvjeciykpd4aZrxDLQCnT99ex9NQgfF9ugdB04t89/1O/w1cDnyilFU=
-';
+    $access_token = 'gjNIH+NmRE2UubUIwtdgdCYSn2fqeBlW9lk3jOseknNL33bVZF0L1QBPGccbPBOPSXKh2H4RJWsgEW0P0u143UNFB/PmaL7q/c3L/323iVaIIV8r06Vsfvjeciykpd4aZrxDLQCnT99ex9NQgfF9ugdB04t89/1O/w1cDnyilFU=';
     $messages = ['type' => 'text','text' => $txtback];//สร้างตัวแปร 
     $url = 'https://api.line.me/v2/bot/message/reply';
     $data = [
@@ -33,7 +32,7 @@ function reply_msg($text,$replyToken)//สร้างข้อความแ�
 					$txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
 					if($txtin == "hibot")
 					{
-						$txtback = "hi human";
+						$txtback = "hihuman";
 						reply_msg($txtback,$replytoken);
 					}	
 				}
