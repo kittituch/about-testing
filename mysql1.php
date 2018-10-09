@@ -10,5 +10,11 @@
     }
     mysqli_query($conn, "SET NAMES utf8");
 	echo "connect !!!!!!";
+	$sql_text = "SELECT * FROM tbl_hope";
+	$query = mysqli_query($conn,$sql_text);
+	while($obj = mysqli_fetch_array($query))
+	{
+  echo $obj["name"];
+ }
 	
  ?>
