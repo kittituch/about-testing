@@ -1,4 +1,9 @@
 <?php
+$server = "us-cdbr-iron-east-01.cleardb.net";
+    $username = "b798786b8aa714";
+    $password = "2e0e0451";
+    $db = "heroku_ce52199dd4f50e1";
+    $conn = new mysqli($server, $username, $password, $db);
 function reply_msg($txtback,$replyToken)//สร้างข้อความและตอบกลับ
 {
     $access_token = 'gjNIH+NmRE2UubUIwtdgdCYSn2fqeBlW9lk3jOseknNL33bVZF0L1QBPGccbPBOPSXKh2H4RJWsgEW0P0u143UNFB/PmaL7q/c3L/323iVaIIV8r06Vsfvjeciykpd4aZrxDLQCnT99ex9NQgfF9ugdB04t89/1O/w1cDnyilFU=';
@@ -30,7 +35,7 @@ function reply_msg($txtback,$replyToken)//สร้างข้อความ�
 				{
 					$replyToken = $event['replyToken']; //เก็บ reply token เอาไว้ตอบกลับ
 					$txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
-					$sqltext = "SELECT * FROM tbl_hope WHERE name = '".$txtin."'";
+					$sql_text = "SELECT * FROM tbl_hope WHERE name = '".$txtin."'";
 					$query = mysqli_query($conn,$sql_text);
 					while($obj = mysqli_fetch_array($query))
 					{
