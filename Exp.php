@@ -43,7 +43,7 @@ function reply_msg($txtback,$replyToken)//สร้างข้อความ�
 						$txtback = $obj["lastname"];
 						
 					}*/
-					$txtback = "ผลการค้นหา ".$num_rows." รายการ https://abouttestings.herokuapp.com/result.php?keyword=".$txtin
+					$txtback = "ผลการค้นหา ".$num_rows." รายการ https://abouttestings.herokuapp.com/result.php?keyword=".$txtin;
 					reply_msg($txtback,$replyToken);
 				}
 			}
