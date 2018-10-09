@@ -1,5 +1,5 @@
 <?php
-function reply_msg($text,$replyToken)//สร้างข้อความและตอบกลับ
+function reply_msg($txtback,$replyToken)//สร้างข้อความและตอบกลับ
 {
     $access_token = 'gjNIH+NmRE2UubUIwtdgdCYSn2fqeBlW9lk3jOseknNL33bVZF0L1QBPGccbPBOPSXKh2H4RJWsgEW0P0u143UNFB/PmaL7q/c3L/323iVaIIV8r06Vsfvjeciykpd4aZrxDLQCnT99ex9NQgfF9ugdB04t89/1O/w1cDnyilFU=';
     $messages = ['type' => 'text','text' => $txtback];//สร้างตัวแปร 
