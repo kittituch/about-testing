@@ -33,7 +33,7 @@ function reply_msg($txtback,$replyToken)//สร้างข้อความ�
 					if($txtin == "hibot")
 					{
 						$txtback = "hihuman";
-						reply_msg($txtback,$replytoken);
+						reply_msg($txtback,$replyToken);
 					}	
 				}
 			}
