@@ -30,9 +30,11 @@ function reply_msg($txtback,$replyToken)//สร้างข้อความ�
 				{
 					$replyToken = $event['replyToken']; //เก็บ reply token เอาไว้ตอบกลับ
 					$txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
-					if($txtin == "hibot")
+					$sqltext = "SELECT * FROM tbl_hope WHERE name = '".$txtin."'";
+					$query = mysqli_query($conn,$sql_text);
+					while($obj = mysqli_fetch_array($query))
 					{
-						$txtback = "hihuman";
+						$txtback = $obj["lastname"];
 						reply_msg($txtback,$replyToken);
 					}	
 				}
