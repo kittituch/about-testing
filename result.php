@@ -48,7 +48,7 @@ if(isset($keyword))
                     $a=1;
                     while($objsearch = mysqli_fetch_array($query_search))
                     {
-                        echo '<a href="'.$objsearch["link"].'" class="list-group-item list-group-item-action">';
+                        echo '<a href="'.$objsearch["email"].'" class="list-group-item list-group-item-action">';
                         echo $a.".<br>";
                         echo "ชื่อ".$objsearch["name"]."<br>";
                         echo "นามสกุล".$objsearch["lastname"]."<br>";
