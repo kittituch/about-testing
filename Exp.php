@@ -38,11 +38,13 @@ function reply_msg($txtback,$replyToken)//สร้างข้อความ�
 					$sql_text = "SELECT * FROM tbl_hope WHERE name LIKE '% ".$txtin."'";
 					$query = mysqli_query($conn,$sql_text);
 					$num_rows = mysqli_num_rows($query);
-					while($obj = mysqli_fetch_array($query))
+					/*while($obj = mysqli_fetch_array($query))
 					{
 						$txtback = $obj["lastname"];
-						reply_msg($txtback,$replyToken);
-					}	
+						
+					}*/
+					$txtback = "ผลการค้นหา ".$num_rows." รายการ https://abouttestings.herokuapp.com/result.php?keyword=".$txtin
+					reply_msg($txtback,$replyToken);
 				}
 			}
 	  }
