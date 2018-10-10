@@ -22,11 +22,16 @@
 					<h4>บันทึกข้อมูล</h4>
 					</div>
 			</div>	
-			</div class="container">
-				<div class="row">
-				<div class="col-lg-3  style="background-color:yellow;">
-					<h4>coll</h4>
-				</div>
-				<div class="col-lg-10  style="background-color:blue;">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-3" style="background-color:yellow;">
+								<h4>coll</h4>
+							</div>
+							<div class="col-lg-10"  style="background-color:blue;">
+								<h4>coll</h4>
+							</div>
+						</div>
+					</div>
+		</div>		
 	</body>
 </html>	
