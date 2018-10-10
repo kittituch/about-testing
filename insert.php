@@ -42,9 +42,10 @@
 							<input class="btn btn-success btn-block" type="submit" value="บันทึก">
 						</div>
 				</div>
-			</div>
-			<div class="col-lg-10"  style="background-color:blue;">
-				 <h4>col2</h4>
+			
+				<div class="col-lg-10"  style="background-color:blue;">
+					<h4>col2</h4>
+				</div>
 			</div>
 		</div>
 				
