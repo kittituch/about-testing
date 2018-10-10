@@ -21,7 +21,8 @@
 					<div class="col-lg-4 offset-lg-4" style="background-color:pink;">
 					<h4>บันทึกข้อมูล</h4>
 					</div>
-			</div>	
+			</div>
+		</div>	
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-2" style="background-color:yellow;">
