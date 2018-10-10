@@ -23,15 +23,30 @@
 					</div>
 			</div>
 		</div>	
-					<div class="container">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2" style="background-color:yellow;">
 						<div class="row">
-							<div class="col-lg-2" style="background-color:yellow;">
-								<h4>coll</h4>
-							</div>
-							<div class="col-lg-10"  style="background-color:blue;">
-								<h4>coll</h4>
-							</div>
+							<label for="name">ชื่อ :</label>
+							<input class="form-control" type="text" name="name" id="name" placeholder="ใส่ชื่อของคุณ">
 						</div>
-					</div>		
+						<div class="row">
+							<label for="lastname">นามสกุล :</label>
+							<input class="form-control" type="text" name="lastname" id="lastname" placeholder="ใส่นามสกุลของคุณ">
+						</div>
+						<div class="row">
+							<label for="usr">ชื่อ :</label>
+							<input class="form-control" type="text" name="email" id="email" placeholder="ใส่ email ของคุณ">
+						</div>
+						<div class="mt-2 row">
+							<input class="btn btn-success btn-block" type="submit" value="บันทึก">
+						</div>
+				</div>
+			</div>
+			<div class="col-lg-10"  style="background-color:blue;">
+				 <h4>col2</h4>
+			</div>
+		</div>
+				
 	</body>
 </html>	
