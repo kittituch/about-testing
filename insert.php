@@ -34,9 +34,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-2" style="background-color:yellow;">
+					<form action="recive.php" method="post">
 						<div class="row">
 							<label for="name">ชื่อ :</label>
-							<input class="form-control" type="text" name="name" id="name" placeholder="ใส่ชื่อของคุณ">
+							<input class="form-control" type="text" name="name"  placeholder="ใส่ชื่อของคุณ">
 						</div>
 						<div class="row">
 							<label for="lastname">นามสกุล :</label>
@@ -49,6 +50,7 @@
 						<div class="mt-2 row">
 							<input class="btn btn-success btn-block" type="submit" value="บันทึก">
 						</div>
+					</form>	
 				</div>
 			
 				<div class="col-lg-10">
