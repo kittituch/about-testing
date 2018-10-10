@@ -14,6 +14,14 @@
 				text-align:center;
 			}
 		</style
+		<?php
+			$server = "us-cdbr-iron-east-01.cleardb.net";
+			$username = "b798786b8aa714";
+			$password = "2e0e0451";
+			$db = "heroku_ce52199dd4f50e1";
+			$conn = new mysqli($server, $username, $password, $db);
+			mysqli_query($conn, "SET NAMES utf8");
+		?>
 	</head>
 	<body>
 		<div class="container-fluid" style="background-color:blue;">
@@ -51,16 +59,21 @@
 									<th>ชื่อ</th>
 									<th>นามสกุล</th>
 									<th>email</th>
-									<th>หมายเหตุ</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td>โอ๊บ</td>
-									<td>ไงจ๊ะ</td>
-									<td>ไม่มี</td>
-									<td>-</td>
-								</tr>
+								<?php
+									$sql = "SELECT * FROM tbl_hope";
+									$query = mysqli_query($conn,$sql);
+									while($obj = mysqli_fetch_array($query))
+									{
+										echo "<tr>";
+										echo "<td>".$obj["name"]."</td>";
+										echo "<td>".$obj["lastname"]."</td>";
+										echo "<td>".$obj["email"]."</td>";
+										echo "</tr>";
+									}
+								?>
 							</tbody>
 						</table>	
 					</div>
