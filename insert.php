@@ -43,11 +43,29 @@
 						</div>
 				</div>
 			
-				<div class="col-lg-10"  style="background-color:blue;">
-					<h4>col2</h4>
+				<div class="col-lg-10">
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>ชื่อ</th>
+									<th>นามสกุล</th>
+									<th>email</th>
+									<th>หมายเหตุ</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>โอ๊บ</td>
+									<td>ไงจ๊ะ</td>
+									<td>ไม่มี</td>
+									<td>-</td>
+								</tr>
+							</tbody>
+						</table>	
+					</div>
 				</div>
 			</div>
-		</div>
-				
+		</div>		
 	</body>
 </html>	
