@@ -32,7 +32,7 @@
 		<div class="container-fluid" style="background-color:blue;">
 			<div class="row row-center">
 					<div class="col-lg-4 offset-lg-4" style="background-color:pink;">
-					<h4>บันทึกข้อมูล</h4>
+					<h4>รายงานการทดสอบอุปกรณ์กลุ่ม 1,2 ในสังกัดกฟต.1 ปี61</h4>
 					</div>
 			</div>
 		</div>	
