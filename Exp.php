@@ -1,4 +1,5 @@
 <?php
+require('render_msg.php');
 $server = "us-cdbr-iron-east-01.cleardb.net";
     $username = "b798786b8aa714";
     $password = "2e0e0451";
@@ -26,6 +27,29 @@ function reply_msg($txtback,$replyToken)//สร้างข้อความ�
     curl_close($ch);
     echo $result . "\r\n";
 }
+function reply_flex_msg($keyword,$replyToken)
+{
+    $access_token = 'gjNIH+NmRE2UubUIwtdgdCYSn2fqeBlW9lk3jOseknNL33bVZF0L1QBPGccbPBOPSXKh2H4RJWsgEW0P0u143UNFB/PmaL7q/c3L/323iVaIIV8r06Vsfvjeciykpd4aZrxDLQCnT99ex9NQgfF9ugdB04t89/1O/w1cDnyilFU=';
+    $keyword1 = $keyword;
+ $messages = flex_msg($keyword1);
+    // Make a POST Request to Messaging API to reply to sender
+    $url = 'https://api.line.me/v2/bot/message/reply';
+    $data = [
+                'replyToken' => $replyToken,
+                'messages' => [$messages],
+            ];
+    $post = json_encode($data);
+    $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    $result = curl_exec($ch);
+    curl_close($ch);
+    echo $result . "\r\n";
+}
       $content = file_get_contents('php://input');//ประกาศตัวแปรชื่อ content เพื่อรับข้อมูลที่พิมจากไลน์มาเก็บที่ตัวเเปร contents
 	  $events = json_decode($content, true);//แปลง json เป็น php เเล้วเก็บในข้อมูล event
 	  if (!is_null($events['events'])) //check ค่าในตัวแปร $events
@@ -36,16 +60,9 @@ function reply_msg($txtback,$replyToken)//สร้างข้อความ�
 				{
 					$replyToken = $event['replyToken']; //เก็บ reply token เอาไว้ตอบกลับ
 					$txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
-					$sql_text = "SELECT * FROM inserttesting WHERE office LIKE '%".$txtin."%'";
-					$query = mysqli_query($conn,$sql_text);
-					$num_rows = mysqli_num_rows($query);
-					/*while($obj = mysqli_fetch_array($query))
-					{
-						$txtback = $obj["lastname"];
-						
-					}*/
-					$txtback = "ผลการค้นหา ".$num_rows." รายการ https://abouttestings.herokuapp.com/result.php?keyword=".$txtin;
-					reply_msg($txtback,$replyToken);
+					
+			
+					reply_flex_msg($txtin,$replyToken);
 				}
 			}
 	  }
