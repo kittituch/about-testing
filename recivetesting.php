@@ -18,7 +18,7 @@ if($method == "POST")
 	$successdate= $_POST["successdate"];
 	$listtestsuccess = $_POST["listtestsuccess"];
 	//echo $number." ".$office." ".$docnumber;
-	$sql = "INSERT INTO inserttesting(number,office,docnumber,docdate,docnumber,listtest,testsuccess,successdate,listtestsuccess) VALUES('$number','$office','$docnumber','$listtest','$testsuccess','$successdate','$listtestsuccess')";
+	$sql = "INSERT INTO inserttesting(number,office,docnumber,docdate,listtest,testsuccess,successdate,listtestsuccess) VALUES('$number','$office','$docnumber','$docdate','$listtest','$testsuccess','$successdate','$listtestsuccess')";
 	$result = mysqli_query($conn, $sql) or trigger_error($conn->erro,office,docnumberr."[$sql]");
 	echo '<script type="text/javascript">';
 	echo 'window.location.href="inserttesting.php";';
