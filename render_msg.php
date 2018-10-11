@@ -1,5 +1,4 @@
 <?php
-
 function flex_msg($keyword)
 {
 	$server = "us-cdbr-iron-east-01.cleardb.net";
@@ -9,7 +8,7 @@ function flex_msg($keyword)
     $conn = new mysqli($server, $username, $password, $db);
 	mysqli_query($conn, "SET NAMES utf8");
 	
-	$sql_key_search = "SELECT * FROM inserttesting WHERE office LIKE '%".$keyword."%' OR type LIKE '%".$keyword."%'";
+	$sql_key_search = "SELECT * FROM inserttesting WHERE office LIKE '%".$keyword."%'";
 	$key_query = mysqli_query($conn,$sql_key_search);
     $numrows = mysqli_num_rows($key_query);
 	$objsearch = mysqli_fetch_array($key_query);
@@ -38,7 +37,7 @@ function flex_msg($keyword)
   "type": "bubble",
   "hero": {
     "type": "image",
-    "url": "https://pqlibrary.herokuapp.com/IMG1360550178.png",
+    "url": "https://abouttestings.herokuapp.com/J675LEOY58NM8E9T59D2AUF7H.jpg",
     "size": "full",
     "aspectRatio": "16:9",
     "aspectMode": "fit",
