@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0," charset="utf-8">
-<title>PSQ V.2</title>
+<title>สถานะงานการทดสอบอุปกรณ์</title>
 <!-- css -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -28,7 +28,7 @@ $server = "us-cdbr-iron-east-01.cleardb.net";
 $keyword = $_GET["keyword"];
 if(isset($keyword))
 {
-    $sql_search = "SELECT * FROM inserttesting WHERE number LIKE '%".$keyword."%'";
+    $sql_search = "SELECT * FROM inserttesting WHERE office LIKE '%".$keyword."%'";
     $query_search = mysqli_query($conn,$sql_search);
 }
 ?>
@@ -40,7 +40,7 @@ if(isset($keyword))
         </div>
     </div>
     <div class="container-fluid">
-        <h3>ผลการค้นหา</h3>
+        <h3>สถานะการทดสอบอุปกรณ์</h3>
         <div class="row">
             <div class="col-lg-12">
                 <div class="list-group">
