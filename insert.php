@@ -38,7 +38,7 @@
 		</div>	
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-2" style="background-color:yellow;">
+				<div class="col-lg-2" style="background-color:LightSteelBlue ;">
 					<form action="recive.php" method="post">
 						<div class="row">
 							<label for="name">ชื่อ :</label>
