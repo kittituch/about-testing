@@ -19,7 +19,7 @@ if($method == "POST")
 	$listtestsuccess = $_POST["listtestsuccess"];
 	//echo $number." ".$office." ".$docnumber;
 	$sql = "INSERT INTO tbl_inserttesting(number,office,docnumber,docdate,docnumber,listtest,testsuccess,successdate,listtestsuccess) VALUES('$number','$office','$docnumber','$listtest','$testsuccess','$successdate','$listtestsuccess')";
-	$result = mysqli_query($conn, $sql) or trigger_error($conn->erro,office,docnumberr."[$sql_insert]");
+	$result = mysqli_query($conn, $sql) or trigger_error($conn->erro,office,docnumberr."[$sql]");
 	echo '<script type="text/javascript">';
 	echo 'window.location.href="inserttesting.php";';
 	echo '</script>';
