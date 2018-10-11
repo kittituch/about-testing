@@ -36,7 +36,7 @@ function reply_msg($txtback,$replyToken)//สร้างข้อความ�
 				{
 					$replyToken = $event['replyToken']; //เก็บ reply token เอาไว้ตอบกลับ
 					$txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
-					$sql_text = "SELECT * FROM inserttesting WHERE number LIKE '%".$txtin."%'";
+					$sql_text = "SELECT * FROM inserttesting WHERE office LIKE '%".$txtin."%'";
 					$query = mysqli_query($conn,$sql_text);
 					$num_rows = mysqli_num_rows($query);
 					/*while($obj = mysqli_fetch_array($query))
