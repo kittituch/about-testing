@@ -52,7 +52,7 @@ function flex_msg($keyword)
     "contents": [
       {
         "type": "text",
-        "text": "All Results",
+        "text": "ผลการค้นหา",
         "weight": "bold",
         "size": "xl"
       },
