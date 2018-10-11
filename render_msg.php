@@ -14,13 +14,13 @@ function flex_msg($keyword)
 	$objsearch = mysqli_fetch_array($key_query);
 	if($numrows > 1)
 	{
-		$url = "line://app/1613340620-gAD41pK9?keyword=".$keyword;
+		$url = "line://app/1613340620-lDEDan3A?keyword=".$keyword;
 		$txtresult = $numrows." items";
 		$btn_txt = "รายละเอียดเพิ่มเติม";
 	}
 	else if($numrows == 1)
 	{
-		$url = "line://app/1613340620-gAD41pK9?keyword=".$keyword;
+		$url = "line://app/1613340620-lDEDan3A?keyword=".$keyword;
 		$txtresult = "จำนวน ".$numrows." รายการ";
 		$btn_txt = "รายละเอียดเพิ่มเติม";
 	}
