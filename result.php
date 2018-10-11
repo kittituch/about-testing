@@ -28,14 +28,14 @@ $server = "us-cdbr-iron-east-01.cleardb.net";
 $keyword = $_GET["keyword"];
 if(isset($keyword))
 {
-    $sql_search = "SELECT * FROM tbl_hope WHERE name LIKE '%".$keyword."%'";
+    $sql_search = "SELECT * FROM inserttesting WHERE number LIKE '%".$keyword."%'";
     $query_search = mysqli_query($conn,$sql_search);
 }
 ?>
     <div class="w3-container w3-lime">
         <div class="w3-row">
             <div class="w3-col w3-container l12 w3-center">  
-                <h4>PEA SMART QUERY V.2</h4>
+                <h4>รายงานการทดสอบอุปกรณ์กลุ่ม 1,2 ในสังกัดกฟต.1 ปี61</h4>
             </div>
         </div>
     </div>
@@ -48,11 +48,16 @@ if(isset($keyword))
                     $a=1;
                     while($objsearch = mysqli_fetch_array($query_search))
                     {
-                        echo '<a href="'.$objsearch["email"].'" class="list-group-item list-group-item-action">';
+                        echo '<a href="'.$objsearch["listtestsuccess"].'" class="list-group-item list-group-item-action">';
                         echo $a.".<br>";
-                        echo "ชื่อ".$objsearch["name"]."<br>";
-                        echo "นามสกุล".$objsearch["lastname"]."<br>";
-                        echo "email ".$objsearch["email"];
+                        echo "ลำดับที่".$objsearch["number"]."<br>";
+                        echo "กฟฟ.ที่ดำเนินการ".$objsearch["office"]."<br>";
+                        echo "เลขที่บันทึก ".$objsearch["docnumber"]."<br>";
+						echo "ลงวันที่".$objsearch["docdate"]."<br>";
+                        echo "จำนวนรายการที่ต้องทำสอบ".$objsearch["listtest"]."<br>";
+                        echo "ผลการทดสอบ".$objsearch["testsuccess"]."<br>";
+						 echo "วันที่ทดสอบเเล้วเสร็จ".$objsearch["successdate"]."<br>";
+                        echo "จำนวนรายการที่ทดสอบเเล้วเสร็จ".$objsearch["listtestsuccess"];
                         echo '</a>';
                         $a=$a+1;
                     }
