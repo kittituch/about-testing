@@ -46,7 +46,11 @@
 						</div>
 						<div class="row">
 							<label for="office">กฟฟ.ที่ดำเนินการ :</label>
-							<input class="form-control" type="text" name="office" id="office" placeholder="เลือก กฟฟ.">
+							<!--<input class="form-control" type="text" name="office" id="office" placeholder="เลือก กฟฟ.">-->
+							<select class="form-control" name="office">
+									<option>กฟจ.พบ.หรือ กวว.(ต.1) </option>
+									<option>กฟจ.รบ.หรือ กวว.(ต.1)</option>
+							</select>
 						</div>
 						<div class="row">
 							<label for="docnumber">เลขที่บันทึก :</label>
