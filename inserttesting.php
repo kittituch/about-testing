@@ -95,7 +95,7 @@
 							</thead>
 							<tbody>
 								<?php
-									$sql = "SELECT * FROM tbl_inserttesting";
+									$sql = "SELECT * FROM inserttesting";
 									$query = mysqli_query($conn,$sql);
 									while($obj = mysqli_fetch_array($query))
 									{
