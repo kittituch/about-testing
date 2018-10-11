@@ -29,7 +29,7 @@
 		?>
 	</head>
 	<body>
-		<div class="container-fluid" style="background-color:blue;">
+		<div class="container-fluid" style="background-color:LightSlateGray ;">
 			<div class="row row-center">
 					<div class="col-lg-4 offset-lg-4" style="background-color:pink;">
 					<h4>รายงานการทดสอบอุปกรณ์กลุ่ม 1,2 ในสังกัดกฟต.1 ปี61</h4>
