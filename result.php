@@ -51,14 +51,14 @@ if(isset($keyword))
                     {
                         echo '<a href="'.$objsearch["listtestsuccess"].'" class="list-group-item list-group-item-action">';
                         echo $a.".<br>";
-                        echo "ลำดับที่".$objsearch["number"]."<br>";
-                        echo "กฟฟ.ที่ดำเนินการ".$objsearch["office"]."<br>";
-                        echo "เลขที่บันทึก ".$objsearch["docnumber"]."<br>";
-						echo "ลงวันที่".$objsearch["docdate"]."<br>";
-                        echo "จำนวนรายการที่ต้องทำสอบ".$objsearch["listtest"]."<br>";
-                        echo "ผลการทดสอบ".$objsearch["testsuccess"]."<br>";
-						 echo "วันที่ทดสอบเเล้วเสร็จ".$objsearch["successdate"]."<br>";
-                        echo "จำนวนรายการที่ทดสอบเเล้วเสร็จ".$objsearch["listtestsuccess"];
+                        echo "ลำดับที่   :  ".$objsearch["number"]."<br>";
+                        echo "กฟฟ.ที่ดำเนินการ   :  ".$objsearch["office"]."<br>";
+                        echo "เลขที่บันทึก   :  ".$objsearch["docnumber"]."<br>";
+						echo "ลงวันที่   :  ".$objsearch["docdate"]."<br>";
+                        echo "จำนวนรายการที่ต้องทำสอบ   :  ".$objsearch["listtest"]."<br>";
+                        echo "ผลการทดสอบ   :  ".$objsearch["testsuccess"]."<br>";
+						 echo "วันที่ทดสอบเเล้วเสร็จ   :  ".$objsearch["successdate"]."<br>";
+                        echo "จำนวนรายการที่ทดสอบเเล้วเสร็จ   :  ".$objsearch["listtestsuccess"];
                         echo '</a>';
                         $a=$a+1;
                     }
