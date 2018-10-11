@@ -25,6 +25,7 @@ $server = "us-cdbr-iron-east-01.cleardb.net";
     $password = "2e0e0451";
     $db = "heroku_ce52199dd4f50e1";
     $conn = new mysqli($server, $username, $password, $db);
+	mysqli_query($conn, "SET NAMES utf8");
 $keyword = $_GET["keyword"];
 if(isset($keyword))
 {
@@ -35,7 +36,7 @@ if(isset($keyword))
     <div class="w3-container w3-lime">
         <div class="w3-row">
             <div class="w3-col w3-container l12 w3-center">  
-                <h4>รายงานการทดสอบอุปกรณ์กลุ่ม 1,2 ในสังกัดกฟต.1 ปี61</h4>
+                <h4>รายงานการทดสอบอุปกรณ์กลุ่ม 1,2 ในสังกัดกฟต.1 ปี 61</h4>
             </div>
         </div>
     </div>
