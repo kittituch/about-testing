@@ -38,7 +38,7 @@ function flex_msg($keyword)
   "type": "bubble",
   "hero": {
     "type": "image",
-    "url": "https://abouttestings.herokuapp.com/J675LEOY58NM8E9T59D2AUF7H.jpg",
+    "url": "https://pqlibrary.herokuapp.com/IMG1360550178.png",
     "size": "full",
     "aspectRatio": "16:9",
     "aspectMode": "fit",
